@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations */
+@keyframes typing {
+  0% { opacity: 0.3; transform: translateY(0px); }
+  50% { opacity: 1; transform: translateY(-5px); }
+  100% { opacity: 0.3; transform: translateY(0px); }
+}
+
+@layer components {
+  .typing-dot {
+    @apply w-2 h-2 rounded-full bg-blue-500;
+    animation: typing 1.2s infinite;
+  }
+  
+  .typing-indicator {
+    @apply flex items-center space-x-2 p-3 max-w-xs rounded-lg bg-gray-100;
+  }
+}
